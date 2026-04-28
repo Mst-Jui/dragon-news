@@ -16,9 +16,16 @@ const LoginPage = () => {
       rememberMe: true,
       callbackURL: "/",
     });
-   
+
+    if (error) {
+      alert(error.message)
+    }
+    if (res) {
+      alert("Signin successful")
+    }
+
   }
- 
+
   return (
     <div className='flex justify-center items-center container mx-auto min-h-[80vh] bg-slate-100'>
       <div className='bg-white p-4 rounded-xl'>
